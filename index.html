@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS source file add down -->
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+    <!-- coustom CSS file Attach down -->
+    <link rel="stylesheet" href="CSS/Sandeep_JS_Task2.css">
+    <title>Customer Form</title>
+</head>
+
+<body>
+    <div class="container"> <!-- Main Container start here -->
+        <h2 class="mt-5 mb-5">Customer Form</h2>
+        <div class="mb-5">
+            <div class="row">
+                <!-- First name input field.  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firtName" class="form-control" id="firstname"
+                        placeholder="Sandeep">
+                </div>
+                <!-- Last name Input field.  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" class="form-control" id="lastname" placeholder="Rajpoot">
+                </div>
+                <!-- date of birth input field.  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="dateOfBirth">Date Of Birth</label>
+                    <input type="date" name="dateOfBirth" class="form-control" id="dob" placeholder="DD/MM/YYYY">
+                </div>
+                <!-- mobile input field .  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="mobile">Mobile</label>
+                    <input type="number" name="mobile" class="form-control" id="mobile" placeholder="100000100000">
+                    <p id="demo"></p>
+                </div>
+                <!-- Email Input Field  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="add@gmail.com">
+                </div>
+                <!-- Address Input Field  -->
+                <div class="form-group col-md-4 mb-3">
+                    <label for="name">Address</label>
+                    <input type="text" name="address" class="form-control" id="address" placeholder="Makan/building,Street,Village/Area,..,..">
+                </div>
+                <!-- Submit of update button (write) create here   -->
+                <div class="col-lg-12 mt-5">
+                    <button class="btn btn-success" id="Submit" onclick="AddData()">Add Data</button>
+                    <button class="btn btn-primary" id="Update" onclick="AddData()">Update</button>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+        <div class="mb-5">
+            <!-- Product field start here  -->
+            <div class="row">
+                <h2 class="mt-2 mb-4">Product Form</h2>
+                <!-- Product name inter field  -->
+                <div class="form-group col-md-2 mb-3">
+                    <label for="name">Product Name</label>
+                    <input type="text" name="product name" class="form-control" id="name" placeholder="Car">
+                </div>
+                <!-- Product Price inter here  -->
+                <div class="form-group col-md-2 mb-3">
+                    <label for="price">Price</label>
+                    <input type="number" name="Price" class="form-control" id="price" placeholder="200000000₹">
+                </div>
+                <!-- Discount field add here  -->
+                <div class="form-group col-md-2 mb-3">
+                    <label for="discount">Discount</label>
+                    <input type="number" name="discount" class="form-control" id="discount"
+                        placeholder="18%">
+                </div>
+                <!-- Final Price add here  -->
+                <div class="form-group col-md-2 mb-3">
+                    <label for="final price">Final Price</label>
+                    <input type="number" name="final price" class="form-control" id="finalprice"
+                        placeholder="Enter Final Price">
+                </div>
+                <!-- Product type add here  -->
+                <div class="form-group col-md-2 mb-3">
+                    <div class="mb-3">
+                        <label for="product type" class="form-label"></label>
+                        <select class="form-select form-select-sm ProductType" id="type" name="product type">
+                            <option selected>Select Type</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="2">Cosmatics</option>
+                            <option value="Cosmatics">Automobile</option>
+                            <option value="Vegitabes">Vegitabes</option>
+                            <option value="Grocery">Grocery</option>
+                            <option value="Stationery">Stationery</option>
+                            <option value="Clothes">Clothes</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <!-- <label >Product Type</label>
+                    <input type="text" name="product type" class="form-control" id="type"
+                        placeholder="Enter Product Type"> -->
+                </div>
+                <!-- Product Status field create here  -->
+                <div class="form-group col-md-2 mb-3">
+                    <div class="mb-3">
+                        <label for="Selecting Status" class="form-label"></label>
+                        <select class="form-select form-select-sm PaymentStatus" id="status">
+                            <option selected>Choose Status</option>
+                            <option value="Paid">Paid</option>
+                            <option value="UnPaid">UnPaid</option>
+                            <option value="NA">NA</option>
+
+                        </select>
+                    </div>
+                </div>
+                <!-- Edit and Delete button create here  -->
+                <div class="col-lg-12 mt-5">
+                    <button class="btn btn-success" id="SubmitOnData" onclick="AddOnData()">Add Data</button>
+                    <button class="btn btn-primary" id="UpdateOnData" onclick="AddOnData()">Update</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- This table create for summit people data  -->
+            <div class="col-12">
+                <table class="table table-bordered" id="customerTable">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Date Of Birth</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+        <!-- This table for submit product data  -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <table class="table table-bordered" id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Discount</th>
+                            <th>Final Price</th>
+                            <th>Product Type</th>
+                            <th>Payment Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- Main contair end here  -->
+
+
+    <script src="JavaScript/Sandeep_JS_Task2.js"></script>
+    <script src="JavaScript/Product.js"></script>
+</body>
+
+</html>
